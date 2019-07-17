@@ -12,22 +12,27 @@ namespace CalculatorWithTests
 
         public decimal GetAddition()
         {
-            throw new NotImplementedException();
+            decimal additionSum = UsersFirstNumber + Addition;
+            return additionSum;
+
         }
 
         public decimal GetSubtraction()
         {
-            throw new NotImplementedException();
+            decimal subtractionSum = UsersFirstNumber - Subtraction;
+            return subtractionSum;
         }
 
         public decimal GetMultiplication()
         {
-            throw new NotImplementedException();
+            decimal multipiliedSum = UsersFirstNumber * Multiplication;
+            return multipiliedSum;
         }
 
         public decimal GetDivision()
         {
-            throw new NotImplementedException();
+            decimal dividedSum = UsersFirstNumber / Division;
+            return dividedSum;
         }
 
         public int GetFactorial()

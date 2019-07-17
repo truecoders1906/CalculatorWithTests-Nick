@@ -4,7 +4,7 @@ namespace CalculatorWithTests
 {
     class Program
     {
-        static decimal GetDecimalFromUser(string question)
+        static decimal GetDecimalAnswerFromUser(string question)
         {
             Console.WriteLine(question);
             string response = Console.ReadLine();
@@ -17,22 +17,28 @@ namespace CalculatorWithTests
         {
             Calculator test = new Calculator();
 
-            Console.WriteLine("Type in a number:");
+            Console.WriteLine("What number would you like to use for our test?");
             string firstNumberResponse = Console.ReadLine();
-            test.UsersFirstNumber = decimal.Parse(firstNumberResponse);
+            test.UsersFirstNumber = GetDecimalAnswerFromUser("What number would you like to use for our test?");
 
-            Console.WriteLine("What would you like to do with this number?");
 
-            Console.WriteLine("Add?");
-            Console.WriteLine("Subtract?");
-            Console.WriteLine("Multiply?");
-            Console.WriteLine("Divide?");
-            Console.WriteLine("Factorial?");
+            string usersChoice = " ";
+
+            while (usersChoice != "Q")
+            {
+                Console.WriteLine("What would you like to do with this number?");
+                Console.WriteLine("Add?");
+                Console.WriteLine("Subtract?");
+                Console.WriteLine("Multiply?");
+                Console.WriteLine("Divide?");
+                Console.WriteLine("Factorial?");
+            }
+            
 
 
             Console.WriteLine("How much would you like to add to this number?");
             string numberBeingAdded = Console.ReadLine();
-            test.Addition = decimal.Parse(numberBeingAdded);
+            test.Addition = GetDecimalAnswerFromUser("How much would you like to add to this number?");
 
             
             decimal additionSum = test.UsersFirstNumber + test.Addition;
