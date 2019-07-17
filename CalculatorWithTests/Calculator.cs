@@ -3,11 +3,12 @@ namespace CalculatorWithTests
 {
     class Calculator
     {
-        public decimal Add { get; set; }
-        public decimal Subtract { get; set; }
-        public decimal Multiply { get; set; }
-        public decimal Divide { get; set; }
-        public decimal Factorial { get; set; }
+        public decimal UsersFirstNumber { get; set; }
+        public decimal Addition { get; set; }
+        public decimal Subtraction { get; set; }
+        public decimal Multiplication { get; set; }
+        public decimal Division { get; set; }
+        public int Factor { get; set; }
 
         public decimal GetAddition()
         {
@@ -29,9 +30,16 @@ namespace CalculatorWithTests
             throw new NotImplementedException();
         }
 
-        public decimal GetFactorial()
+        public int GetFactorial()
         {
-            throw new NotImplementedException();
+            int num = 1;
+            int usersNumber = decimal.ToInt32(UsersFirstNumber);
+            while (usersNumber != 1)
+            {
+                num = num * usersNumber;
+                usersNumber = usersNumber - 1;
+            }
+            return num;
         }
     }
 }
