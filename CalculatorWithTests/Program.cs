@@ -92,6 +92,9 @@ namespace CalculatorWithTests
                 }
 
                 Console.WriteLine("The test is finished running!");
+
+                Console.WriteLine("Goodbye!");
+
                 return;
             }
             
