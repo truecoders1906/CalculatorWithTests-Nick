@@ -1,7 +1,10 @@
-﻿
+﻿using System;
+using System.Collections.Generic;
+using System.Text;
+
 namespace CalculatorWithTests
 {
-    class Calculator
+    public class Calculator
     {
         public decimal UsersFirstNumber { get; set; }
         public decimal Addition { get; set; }
@@ -10,41 +13,46 @@ namespace CalculatorWithTests
         public decimal Division { get; set; }
         public int Factor { get; set; }
 
-        public decimal GetAddition()
+        
+        public decimal GetAdditionTotal()
         {
-            decimal additionSum = UsersFirstNumber + Addition;
-            return additionSum;
+            return UsersFirstNumber + Addition;
+            //decimal additionTotal = UsersFirstNumber + Addition;
+            //return additionTotal;
 
         }
 
-        public decimal GetSubtraction()
+        public decimal GetSubtractionTotal()
         {
-            decimal subtractionSum = UsersFirstNumber - Subtraction;
-            return subtractionSum;
+            return UsersFirstNumber - Subtraction;
+            //decimal subtractionTotal = UsersFirstNumber - Subtraction;
+            //return subtractionTotal;
         }
 
-        public decimal GetMultiplication()
+        public decimal GetMultiplicationTotal()
         {
-            decimal multipiliedSum = UsersFirstNumber * Multiplication;
-            return multipiliedSum;
+            return UsersFirstNumber * Multiplication;
+            //decimal multipiliedTotal = UsersFirstNumber * Multiplication;
+            //return multipiliedTotal;
         }
 
-        public decimal GetDivision()
+        public decimal GetDivisionTotal()
         {
-            decimal dividedSum = UsersFirstNumber / Division;
-            return dividedSum;
+            return UsersFirstNumber / Division;
+            //decimal dividedTotal = UsersFirstNumber / Division;
+            //return dividedTotal;
         }
 
-        public int GetFactorial()
+        public int GetFactorialTotal(int usersNumber)
         {
-            int num = 1;
-            int usersNumber = decimal.ToInt32(UsersFirstNumber);
+            int usersNumberChoice = 1;
+            
             while (usersNumber != 1)
             {
-                num = num * usersNumber;
+                usersNumberChoice = usersNumberChoice * usersNumber;
                 usersNumber = usersNumber - 1;
             }
-            return num;
+            return usersNumberChoice;
         }
     }
 }
